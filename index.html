@@ -51,7 +51,128 @@
         </div>
         <!--fin de boîte page d'accueil-->
 
+        <!--modal-->
+        <div class="bground">
+            <div class="content">
+                <span class="close"></span>
+                <div class="modal-body">
+                    <!--form-->
+                    <form action="index.html" id="form" name="reserve" method="GET">
+                        <!--first name-->
+                        <div class="formData" data-error="Vous devez entrer 2 caractères ou plus." data-error-visible="false">
+                            <label for="first">Prénom</label><br>
+                            <input type="text" class="text-control success" id="first" name="first" minlength="2" placeholder="Prénom"><br>
+                        </div>
+                        <!--fin de first name-->
 
+                        <!--last name-->
+                        <div class="formData" data-error="Vous devez entrer 2 caractères ou plus." data-error-visible="false">
+                            <label for="last">Nom</label><br>
+                            <input type="text" class="text-control" id="last" name="last" placeholder="Nom"><br>
+                        </div>
+                        <!--fin de last name-->
+
+                        <!--email-->
+                        <div class="formData" data-error="Vous devez entrer une adresse email valide." data-error-visible="false">
+                            <label for="email">E-mail</label><br>
+                            <input type="email" class="text-control" id="email" name="email" placeholder="exemple@email.com"><br>
+                        </div>
+                        <!--fin de email-->
+
+                        <!--birthdate-->
+                        <div class="formData" data-error="Vous devez entrer votre date de naissance." data-error-visible="false">
+                            <label for="birthdate">Date de naissance</label><br>
+                            <input type="date" class="text-control" id="birthdate" name="birthdate"><br>
+                        </div>
+                        <!--fin de birthdate-->
+
+                        <!--tournaments-->
+                        <div class="formData" data-error="Veuillez saisir une valeur numérique" data-error-visible="false">
+                            <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
+                            <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99" placeholder="0"><br>
+                        </div>
+                        <!--fin de tournaments-->
+
+                        <!--locations-->
+                        <p class="text-label">Quelles villes ?</p>
+                        <div class="formData" id="allLocations" data-error="Veuillez sélectionner une ville." data-error-visible="false">
+                            <!--New York-->
+                            <input type="checkbox" class="checkbox-input" id="location1" name="location" value="New York">
+                            <label for="location1" class="checkbox-label">
+                                <span class="checkbox-icon"></span>New York
+                            </label>
+                            <!--fin de New York-->
+
+                            <!--San Francisco-->
+                            <input type="checkbox" class="checkbox-input" id="location2" name="location" value="San Francisco">
+                            <label for="location2" class="checkbox-label">
+                                <span class="checkbox-icon"></span>San Francisco
+                            </label>
+                            <!--fin de San Francisco-->
+
+                            <!--Seatle-->
+                            <input type="checkbox" class="checkbox-input" id="location3" name="location" value="Seatle">
+                            <label for="location3" class="checkbox-label">
+                                <span class="checkbox-icon"></span>Seatle
+                            </label>
+                            <!--fin de Seatle-->
+
+                            <!--Chicago-->
+                            <input type="checkbox" class="checkbox-input" id="location4" name="location" value="Chicago">
+                            <label for="location4" class="checkbox-label">
+                                <span class="checkbox-icon"></span>Chicago
+                            </label>
+                            <!--fin de Chicago-->
+
+                            <!--Boston-->
+                            <input type="checkbox" class="checkbox-input" id="location5" name="location" value="Boston">
+                            <label for="location5" class="checkbox-label">
+                                <span class="checkbox-icon"></span>Boston
+                            </label>
+                            <!--fin de Boston-->
+
+                            <!--Portland-->
+                            <input type="checkbox" class="checkbox-input" id="location6" name="location" value="Portland">
+                            <label for="location6" class="checkbox-label">
+                                <span class="checkbox-icon"></span>Portland
+                            </label>
+                            <!--fin de portland-->
+                        </div>
+                        <!--fin de locations-->
+
+                        <!--term of use-->
+                        <div class="formData" data-error="Vous devez accepter les conditions d'utilisation." data-error-visible="false">
+                            <input type="checkbox" class="checkbox-input" id="checkbox1">
+                            <label for="checkbox1" class="checkbox2-label">
+                                    <span class="checkbox-icon"></span>
+                                    J'ai lu et accepté les conditions d'utilisation.
+                                </label><br>
+                            <input type="checkbox" class="checkbox-input" id="checkbox2">
+                            <label for="checkbox2" class="checkbox2-label">
+                                    <span class="checkbox-icon"></span>
+                                    Je souhaite être prévenu des prochains évènements.
+                                </label><br>
+                        </div>
+                        <!--fin de term of use-->
+
+                        <!--bouton c'est parti-->
+                        <input type="submit" class="btn-submit" value="C'est parti">
+                        <!--fin de bouton c'est parti-->
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--fin de modal-->
+
+        <!--confirmation submit-->
+        <div class="container-confirmation-submit">
+            <div class="submitted-form">
+                <span class="close-modal-submit"></span>
+                <p>Merci !<br> Votre réservation a été reçue.</p>
+                <button id="close-btn-confirmation">Fermer</button>
+            </div>
+        </div>
+        <!--fin de confirmation submit-->
     </main>
 </body>
 
