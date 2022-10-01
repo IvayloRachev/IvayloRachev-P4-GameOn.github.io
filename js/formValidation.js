@@ -114,3 +114,15 @@ formFieldsValidation(quantity, checkTournamentsQuantity, 'focusout');
 formFieldsValidation(allLocations, checkLocations, 'change');
 formFieldsValidation(checkbox1, checkCheckBox, 'change');
 // fin de form events
+
+//all validations
+function forAllFieldsValidation() {
+    checkFirstName()
+    checkLastName()
+    checkEmail()
+    checkBirthdate()
+    checkTournamentsQuantity()
+    checkLocations()
+    checkCheckBox()
+}
+//fin de all validations
