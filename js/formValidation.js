@@ -90,3 +90,14 @@ function checkLocations() {
     return false;
 }
 //fin de check locations
+
+//check term of use
+function checkCheckBox() {
+    if (checkbox1.checked === false) {
+        checkbox1.parentElement.setAttribute('data-error-visible', 'true');
+        return false;
+    }
+    checkbox1.parentElement.setAttribute('data-error-visible', 'false');
+    return true;
+}
+//fin de check term of use
