@@ -23,3 +23,7 @@ function closeSubmit() {
     quantity.style.display = 'none';
 }
 //fin de close submit
+
+//close modal events
+closeModalSubmit[0].addEventListener('click', closeSubmit);
+closeBtnConfirmation.addEventListener('click', closeSubmit);
