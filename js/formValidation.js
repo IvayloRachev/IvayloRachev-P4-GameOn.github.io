@@ -139,3 +139,15 @@ function formValidation() {
     return false;
 }
 //fin de all validations
+
+//form send
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (formValidation() === true) {
+        displayModalSubmit();
+        document.querySelector('form').reset();
+    } else {
+        forAllFieldsValidation();
+    }
+});
+//fin de form send
