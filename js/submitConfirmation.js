@@ -12,3 +12,14 @@ function displayModalSubmit() {
     modalSubmit[0].style.display = 'block';
 }
 //fin de modal submit
+
+//close submit
+function closeSubmit() {
+    modalSubmit[0].style.display = 'none';
+    first.style.display = 'none';
+    last.style.display = 'none';
+    email.style.display = 'none';
+    birthdate.style.display = 'none';
+    quantity.style.display = 'none';
+}
+//fin de close submit
