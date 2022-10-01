@@ -64,3 +64,16 @@ function checkBirthdate() {
     return true;
 }
 //fin de check birthdate
+
+//check number of tournaments
+function checkTournamentsQuantity() {
+    if (tournamentsQuantity.value.trim().lenght === 0 || isNaN(quantity.value.trim()) === true || quantity.value.trim() < 0) {
+        quantity.parentElement.setAttribute('data-error-visible', 'true');
+        quantity.style.border = '2px solid #e54858';
+        return false;
+    }
+    quantity.parentElement.setAttribute('data-error-visible', 'false');
+    quantity.style.border = '2px #279e7a 0.19rem';
+    return true;
+}
+//fin de check number of tournament
