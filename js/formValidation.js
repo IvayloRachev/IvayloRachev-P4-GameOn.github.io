@@ -101,3 +101,16 @@ function checkCheckBox() {
     return true;
 }
 //fin de check term of use
+
+//form events
+function formFieldsValidation(element, method, event) {
+    element.addEventListener(event, method);
+}
+formFieldsValidation(firstName, checkFirstName, 'focusout');
+formFieldsValidation(lastName, checkLastName, 'focusout');
+formFieldsValidation(email, checkEmail, 'focusout');
+formFieldsValidation(birthdate, checkBirthdate, 'focusout');
+formFieldsValidation(quantity, checkTournamentsQuantity, 'focusout');
+formFieldsValidation(allLocations, checkLocations, 'change');
+formFieldsValidation(checkbox1, checkCheckBox, 'change');
+// fin de form events
