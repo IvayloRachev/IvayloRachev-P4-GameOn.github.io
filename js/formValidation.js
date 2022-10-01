@@ -125,4 +125,17 @@ function forAllFieldsValidation() {
     checkLocations()
     checkCheckBox()
 }
+
+function formValidation() {
+    if (checkFirstName() === true &&
+        checkLastName() === true &&
+        checkEmail() === true &&
+        checkBirthdate() === true &&
+        checkTournamentsQuantity() === true &&
+        checkLocations() === true &&
+        checkCheckBox() === true) {
+        return true;
+    }
+    return false;
+}
 //fin de all validations
