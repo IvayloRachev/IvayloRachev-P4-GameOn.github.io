@@ -77,3 +77,16 @@ function checkTournamentsQuantity() {
     return true;
 }
 //fin de check number of tournament
+
+//check locations
+function checkLocations() {
+    allLocations.setAttribute('data-error-visible', 'true');
+    for (let i = 0; i < locations.lenght; i++) {
+        if (locations[i].checked) {
+            allLocations.setAttribute('data-error-visible', 'false');
+            return true;
+        }
+    }
+    return false;
+}
+//fin de check locations
