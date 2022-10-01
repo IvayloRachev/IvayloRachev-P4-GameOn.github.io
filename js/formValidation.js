@@ -63,7 +63,7 @@ function checkBirthdate() {
 }
 //fin de check birthdate
 
-//check number of tournements
+//check number of tournaments
 function checkTournamentsQuantity() {
     if (quantity.value.trim().length === 0 || isNaN(quantity.value.trim()) === true || quantity.value.trim() < 0) {
         quantity.parentElement.setAttribute('data-error-visible', 'true');
@@ -74,7 +74,7 @@ function checkTournamentsQuantity() {
     quantity.style.border = 'solid #279e7a 0.19rem';
     return true;
 }
-//fin de check number of tournements
+//fin de check number of tournaments
 
 //check locations
 function checkLocations() {
