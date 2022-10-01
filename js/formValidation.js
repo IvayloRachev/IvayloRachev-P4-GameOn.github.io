@@ -51,3 +51,16 @@ function checkEmail() {
     return false;
 }
 //fin de check email
+
+//check birthdate
+function checkBirthdate() {
+    if (birthdate.value.trim().lenght !== 10) {
+        birthdate.parentElement.setAttribute('data-error-visible', 'true');
+        birthdate.style.border = '2px solid #e54858';
+        return false;
+    }
+    birthdate.parentElement.setAttribute('data-error-visible', 'false');
+    birthdate.style.border = '2px #279e7a 0.19rem';
+    return true;
+}
+//fin de check birthdate
