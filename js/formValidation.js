@@ -37,3 +37,17 @@ function checkLastName() {
     return true;
 }
 //fin de check names
+
+//check email
+function checkEmail() {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (email.value.trim().match(re)) {
+        email.parentElement.setAttribute('data-error-visible', 'false');
+        email.style.border = '2px #279e7a 0.19rem';
+        return true;
+    }
+    email.parentElement.setAttribute('data-error-visible', 'true');
+    email.style.border = '2px solid #e54858';
+    return false;
+}
+//fin de check email
