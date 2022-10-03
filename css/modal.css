@@ -19,7 +19,6 @@ body {
     flex-direction: column;
     font-family: var(--font-default);
     font-size: 18px;
-    max-width: 1300px;
     margin: 0 auto;
 }
 
@@ -33,11 +32,12 @@ img {
 }
 
 .topnav {
+    width: 91%;
     overflow: hidden;
-    margin: 3.5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 20px 0 20px 100px;
 }
 
 .header-logo {
@@ -72,7 +72,7 @@ img {
     border-radius: 0.9375rem;
 }
 
-.topnav a:focus span {
+.topnav a:hover span {
     border-bottom: 0.13rem solid white;
 }
 
@@ -82,7 +82,7 @@ img {
 }
 
 main {
-    font-size: 130%;
+    font-size: 132%;
     font-weight: bolder;
     color: black;
     padding-top: 0.5vw;
@@ -94,12 +94,18 @@ main {
     align-items: center;
 }
 
+.hero-section {
+    width: 90%;
+    height: auto;
+    margin: auto;
+}
+
 .modal-btn {
     font-size: 145%;
     background: #fe142f;
     display: flex;
     margin: auto;
-    padding: 2em;
+    padding-top: 2em;
     color: #fff;
     padding: 0.75rem 2.5rem;
     border-radius: 1rem;
@@ -415,6 +421,8 @@ input[data-error]::after {
 }
 
 .hero-section {
+    width: 90%;
+    height: 650px;
     border-radius: 10px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -429,7 +437,7 @@ input[data-error]::after {
     color: #fff;
     position: relative;
     text-align: left;
-    min-width: 424px;
+    width: 424px;
 }
 
 .hero-content::after {
@@ -459,7 +467,7 @@ input[data-error]::after {
     font-weight: normal;
     margin-top: 57px;
     padding: 0;
-    font-size: 2vw;
+    font-size: 1.5vw;
 }
 
 .btn-signup {
@@ -602,16 +610,12 @@ footer {
 
 /* MOBILE */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 800px) {
     .topnav {
         flex-wrap: wrap;
-    }
-    .topnav a {
-        display: none;
-    }
-    .topnav a.icon {
-        float: right;
-        display: block;
+        margin: 20px 0 20px 10px;
     }
     .topnav.responsive {
         position: relative;
@@ -626,15 +630,20 @@ footer {
         display: block;
         text-align: left;
     }
-}
-
-@media screen and (max-width: 800px) {
+    .topnav a {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
     .header-logo img {
         width: 150px;
     }
     .hero-section {
         display: block;
         box-shadow: unset;
+        height: auto;
     }
     .hero-content {
         background: #fff;
@@ -647,16 +656,16 @@ footer {
     }
     .hero-content .btn-signup {
         display: none;
+        margin: auto;
     }
     .hero-headline {
         width: 100%;
         flex-wrap: wrap;
-        font-size: 2.5rem;
-        white-space: normal;
+        font-size: 2.3rem;
     }
     .hero-text {
-        width: unset;
-        font-size: 1rem;
+        width: 75%;
+        font-size: 12px;
         margin-top: 1.5rem;
     }
     .hero-img img {
@@ -671,5 +680,16 @@ footer {
     .copyrights {
         margin-top: 50px;
         text-align: center;
+    }
+    .hero-img .btn-signup {
+        margin: auto;
+        margin-top: 40px;
+        margin-bottom: 0;
+    }
+    footer {
+        margin-top: 0;
+    }
+    main {
+        margin: 0;
     }
 }
