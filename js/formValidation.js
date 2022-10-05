@@ -51,8 +51,8 @@ function checkEmail() {
 //fin de check email
 
 //check birthdate
-function checkBirthdate() {
-    if (birthdate.value.trim().length !== 10) {
+function checkBirthdate(birthdate) {
+    if (!birthdate.value.match(/^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$/)) {
         birthdate.parentElement.setAttribute('data-error-visible', 'true');
         birthdate.style.border = '2px solid #e54858';
         return false;
