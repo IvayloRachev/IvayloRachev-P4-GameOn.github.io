@@ -51,8 +51,9 @@ function checkEmail() {
 //fin de check email
 
 //check birthdate
-function checkBirthdate(birthdate) {
-    if (!birthdate.value.match(/^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$/)) {
+function checkBirthdate() {
+    const date = new Date(birthdate.value);
+    if (date == "Invalid Date") {
         birthdate.parentElement.setAttribute('data-error-visible', 'true');
         birthdate.style.border = '2px solid #e54858';
         return false;
